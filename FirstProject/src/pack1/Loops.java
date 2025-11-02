@@ -2,12 +2,17 @@ package pack1;
 
 public class Loops {
 
+	int a = 30;
+	String b;
+	
+
+	
 	
 	public static void main(String[] args) {
 		
 		System.out.println("Git Check");
 		
-
+		Loops l = new Loops();
 		
 		
 //		1

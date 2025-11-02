@@ -4,6 +4,10 @@ public class ControlStatements2 {
 	
 	
 
+	ControlStatements2()
+	{
+		
+	}
 	
 //	switch(expression)
 //	{

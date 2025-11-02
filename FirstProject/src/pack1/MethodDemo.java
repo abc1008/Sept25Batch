@@ -3,6 +3,11 @@ package pack1;
 public class MethodDemo 
 {
 	
+	MethodDemo()
+	{
+		
+	}
+	
 //	SYNTAX: Non-Static method
 	
 //	public void methodName()
