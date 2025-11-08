@@ -1,6 +1,9 @@
 package pack1;
 
-public class Class_1 {
+import access_modifiers.Class_11;
+
+public class Class_1 extends Class_11
+{
 	
 	
 //	public void methodName()
@@ -27,6 +30,7 @@ public class Class_1 {
 		 
 //		 DataType variableName = value;
 		 Class_1 ref = new Class_1();
+//		 ref.m1();
 		 
 //		 Reserved words
 		 
@@ -46,6 +50,15 @@ public class Class_1 {
 		 
 		 String s1 = "abcd123$#*   ";
 		 
+		 
+//		 Class_1 ref2 = new Class_11();
+//		 ref2.m1();
+		 
+//		 Class_1 ref4 = new Class_11();
+//		 ref4.m1();
+		 
+		 
+//		 System.out.println(ref4.num1);
 		 
 	}
 	
