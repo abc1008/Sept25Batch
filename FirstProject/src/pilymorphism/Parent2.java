@@ -23,6 +23,11 @@ public class Parent2 {
 	}
 	
 	
+	public void m6()
+	{
+		System.out.println("m6");
+	}
+	
 	
 
 	

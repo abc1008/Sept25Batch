@@ -30,7 +30,7 @@ public class Child2 extends Parent2
 		Parent2 p1 = new Child2();   // parent ref + Child obj
 		p1.m1();
 		
-
+		p1.m6();
 		
 	}
 	
