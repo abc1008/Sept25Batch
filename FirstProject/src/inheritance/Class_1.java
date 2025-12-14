@@ -11,5 +11,17 @@ public class Class_1
 	{
 		System.out.println("1 arg - Class_1 Constructor");
 	}
+	
+	
+	public void m1()
+	{
+		System.out.println("M1");
+	}
 
+	public void m2()
+	{
+		System.out.println("M2");
+	}
+	
+	
 }

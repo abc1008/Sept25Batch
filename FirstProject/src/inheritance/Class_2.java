@@ -12,6 +12,10 @@ public class Class_2 extends Class_1
 	}
 	
 	
+	public void m1()
+	{
+		System.out.println("M1 child");
+	}
 	
 	
 	public static void main(String[] args) 
@@ -19,7 +23,10 @@ public class Class_2 extends Class_1
 		
 		Class_2 ref = new Class_2();
 		
+		Class_1 conv = (Class_1)ref;
 		
+		
+		conv.m1();
 		
 	}
 	
