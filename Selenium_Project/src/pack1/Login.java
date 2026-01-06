@@ -20,8 +20,19 @@ public class Login
 //		 locate webelement - findElement
 		WebElement emailTextBox = driver.findElement(By.id("input-email"));
 		
-//		Enter Text :  sendKeys
+//		Enter Text :  sendKeysThread.sleep(3000);
 		emailTextBox.sendKeys("ag89111@gmail.com");
+		
+		
+		Thread.sleep(3000);
+		
+		WebElement passwordTextBox = driver.findElement(By.name("password"));
+		passwordTextBox.sendKeys("Unlock@123");
+		
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[contains(@class,'btn-primary')]")).click();
+		
+		
 		
 		
 	}
