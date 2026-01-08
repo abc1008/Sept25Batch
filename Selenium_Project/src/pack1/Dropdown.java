@@ -1,5 +1,6 @@
 package pack1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -25,9 +26,11 @@ public class Dropdown
 		
 		List<WebElement> allDays = driver.findElements(By.xpath("//select[@id='day']//option"));
 		
+		
 		for(WebElement day : allDays)
 		{
 			System.out.println(day.getText());
+			
 			if(day.getText().equals("10"))
 			{
 				day.click();
