@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import utility.JSMethods;
+
 public class AlertPopups
 {
 
@@ -17,12 +19,14 @@ public class AlertPopups
 		driver.get("https://demoqa.com/alerts"); // hit url
 
 		Thread.sleep(3000);
-
+		
 		WebElement button = driver.findElement(By.id("confirmButton"));
 
 //		javascript click
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", button);
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", button);
+		
+		JSMethods.clickUsingJavaScript(driver, button);
 
 		Thread.sleep(3000);
 
