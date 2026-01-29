@@ -1,12 +1,14 @@
 package test_script_classes;
 
-import page_classes.LoginPage;
-import test_suites.LoginTestSuite;
+import java.io.IOException;
 
-public class LoginTestScipt extends LoginTestSuite
+import basePack.BaseClass;
+import page_classes.LoginPage;
+
+public class LoginTestScipt extends BaseClass
 {
 
-	public void performLogin() throws InterruptedException
+	public void performLogin() throws InterruptedException, IOException
 	{
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login();
