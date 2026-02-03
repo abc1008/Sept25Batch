@@ -2,74 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-29T20:27:45 IST" name="Default suite" finished-at="2026-01-29T20:28:26 IST" duration-ms="41702">
+  <suite started-at="2026-02-03T20:24:40 IST" name="Default suite" finished-at="2026-02-03T20:25:00 IST" duration-ms="20070">
     <groups>
     </groups>
-    <test started-at="2026-01-29T20:27:45 IST" name="Default test" finished-at="2026-01-29T20:28:26 IST" duration-ms="41702">
+    <test started-at="2026-02-03T20:24:40 IST" name="Default test" finished-at="2026-02-03T20:25:00 IST" duration-ms="20070">
       <class name="test_suites.HeaderTestSuite">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:test_suites.HeaderTestSuite@302552ec]" started-at="2026-01-29T20:27:40 IST" name="initDriver" finished-at="2026-01-29T20:27:45 IST" duration-ms="5044" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:test_suites.HeaderTestSuite@7a8c8dcf]" started-at="2026-02-03T20:24:36 IST" name="initDriver" finished-at="2026-02-03T20:24:40 IST" duration-ms="4367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method is-config="true" signature="login()[pri:0, instance:test_suites.HeaderTestSuite@302552ec]" started-at="2026-01-29T20:27:45 IST" name="login" finished-at="2026-01-29T20:27:50 IST" duration-ms="5568" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:test_suites.HeaderTestSuite@7a8c8dcf]" started-at="2026-02-03T20:24:40 IST" name="login" finished-at="2026-02-03T20:24:41 IST" duration-ms="589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="tc_123_UpdatePasswordTest()[pri:0, instance:test_suites.HeaderTestSuite@302552ec]" started-at="2026-01-29T20:27:50 IST" name="tc_123_UpdatePasswordTest" finished-at="2026-01-29T20:28:05 IST" duration-ms="15080" status="PASS">
+        <test-method signature="tc_123_UpdatePasswordTest()[pri:0, instance:test_suites.HeaderTestSuite@7a8c8dcf]" started-at="2026-02-03T20:24:41 IST" name="tc_123_UpdatePasswordTest" finished-at="2026-02-03T20:24:59 IST" duration-ms="18343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_123_UpdatePasswordTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:test_suites.HeaderTestSuite@302552ec]" started-at="2026-01-29T20:28:05 IST" name="logout" finished-at="2026-01-29T20:28:26 IST" duration-ms="20982" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getClass()" because "exceptionDriver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getClass()" because "exceptionDriver" is null
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utility.ExplicitWait.waitUntilElementIsVisible(ExplicitWait.java:17)
-at page_classes.HeaderPage.logout(HeaderPage.java:86)
-at test_script_classes.HeaderTestScipt.performLogout(HeaderTestScipt.java:17)
-at basePack.BaseClass.logout(BaseClass.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:test_suites.HeaderTestSuite@7a8c8dcf]" started-at="2026-02-03T20:24:59 IST" name="logout" finished-at="2026-02-03T20:25:00 IST" duration-ms="1085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_suites.HeaderTestSuite@302552ec]" started-at="2026-01-29T20:28:26 IST" name="tearDown" finished-at="2026-01-29T20:28:27 IST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_suites.HeaderTestSuite@7a8c8dcf]" started-at="2026-02-03T20:25:00 IST" name="tearDown" finished-at="2026-02-03T20:25:01 IST" duration-ms="773" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

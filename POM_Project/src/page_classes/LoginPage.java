@@ -1,15 +1,16 @@
 package page_classes;
 
 import java.io.IOException;
+import java.security.cert.Extension;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utility.ExplicitWait;
+import utility.ExtentReportHelper;
 import utility.PropertyReader;
 
 public class LoginPage {
@@ -40,13 +41,15 @@ public class LoginPage {
 //	Constructor
 	public LoginPage(WebDriver driver)
 	{
+		this.driver = driver;
 		PageFactory.initElements(driver, this);   // initialize webelements
 	}
 	
 
 //	Methods
-	public void login() throws InterruptedException, IOException
+	public boolean login() throws InterruptedException, IOException
 	{
+		boolean result = false;
 		try 
 		{
 			textBoxEmail.sendKeys(PropertyReader.read("UserId"));
@@ -57,18 +60,22 @@ public class LoginPage {
 		
 			if(dropdownProfileIcon.isDisplayed())
 			{
-				System.out.println("Login Successful");
+				ExtentReportHelper.logPass("Login Successful");
+				result = true;
 			}
 			else
 			{
-				System.out.println("Login Failed");
+				ExtentReportHelper.logFail("Logout Failed");
 			}
 			
 		} 
 		catch (Exception e) 
 		{
 			System.out.println("Exception in method 'login' : "+e.getMessage());
+			ExtentReportHelper.logFail("Exception in method 'login' : "+e.getMessage());
 		}
+		
+		return result;
 	}
 	
 	

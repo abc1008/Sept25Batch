@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeSuite;
 
 import test_script_classes.HeaderTestScipt;
 import test_script_classes.LoginTestScipt;
+import utility.ExtentReportHelper;
 import utility.PropertyReader;
 
 public class BaseClass {
@@ -35,7 +36,7 @@ public class BaseClass {
 			System.out.println("Invalid Browser");
 		}
 		
-		
+		ExtentReportHelper extentReportHelper = new ExtentReportHelper();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize(); // method chaining
 		driver.get(PropertyReader.read("TestSiteUrl")); // hit url
@@ -44,6 +45,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void login() throws InterruptedException, IOException
 	{
+		ExtentReportHelper.startTest("Test_1");
 		LoginTestScipt loginTestScipt = new LoginTestScipt();
 		loginTestScipt.performLogin();
 	}
@@ -59,6 +61,7 @@ public class BaseClass {
 	@AfterSuite
 	public void tearDown()
 	{
+		ExtentReportHelper.endTest();
 		driver.quit();
 	}
 	

@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utility.ExplicitWait;
+import utility.ExtentReportHelper;
 
-public class HeaderPage {
-	
+public class HeaderPage
+{
+
 	WebDriver driver;
-	
+
 //	Variables
 	private final String dropdownProfileIconById = "page-header-user-dropdown";
 	private final String optionChangePasswordByXpathPath = "//span[text()='Change Password']";
@@ -20,94 +22,97 @@ public class HeaderPage {
 	private final String msgSuccessByXpath = "//span[@class='jconfirm-title']";
 	private final String optionLogoutByXpathPath = "//span[text()='Logout']";
 	private final String textBoxEmailByPath = "//input[@placeholder='Email']";
-	
-	
+
 	@FindBy(xpath = textBoxEmailByPath)
 	private WebElement textBoxEmail;
-	
+
 	@FindBy(xpath = optionLogoutByXpathPath)
 	private WebElement optionLogout;
-	
+
 	@FindBy(id = dropdownProfileIconById)
 	private WebElement dropdownProfileIcon;
-	
+
 	@FindBy(xpath = optionChangePasswordByXpathPath)
 	private WebElement optionChangePassword;
-	
+
 	@FindBy(xpath = textBoxPasswordByXpathPath)
 	private WebElement textBoxPassword;
-	
+
 	@FindBy(xpath = textBoxConfirmPasswordByXpathPath)
 	private WebElement textBoxConfirmPassword;
-	
+
 	@FindBy(xpath = buttonUpdateByXpath)
 	private WebElement buttonUpdate;
-	
+
 	@FindBy(xpath = msgSuccessByXpath)
 	private WebElement msgSuccess;
-	
-	
+
 //	Constructor
 	public HeaderPage(WebDriver driver)
 	{
-		PageFactory.initElements(driver, this);   // initialize webelements
+		PageFactory.initElements(driver, this); // initialize webelements
 	}
-	
 
 //	Methods
-	public void updatePassword()
+	public boolean updatePassword()
 	{
-		try 
+		boolean testResult = false;
+		try
 		{
 			dropdownProfileIcon.click();
+			ExtentReportHelper.logInfo("Clicked on profile icon.");
 			optionChangePassword.click();
-			
+
 			textBoxPassword.sendKeys("abcd@1234");
 			textBoxConfirmPassword.sendKeys("abcd@1234");
 			buttonUpdate.click();
-			
-			if(msgSuccess.getText().contains("Success!"))
+
+			if (msgSuccess.getText().contains("Success!"))
 			{
 				System.out.println("Password updated successfully.");
+				ExtentReportHelper.logPass("Password updated successfully.");
+				testResult = true;
 			}
 			else
 			{
 				System.out.println("Failed to update password.");
+				ExtentReportHelper.logFail("Failed to update password.");
 			}
-			
-			ExplicitWait.waitUntilInVisibilityOfElement(driver,msgSuccess);
-		} 
-		catch (Exception e) 
+
+			ExplicitWait.waitUntilInVisibilityOfElement(driver, msgSuccess);
+		}
+		catch (Exception e)
 		{
-			System.out.println("Exception in method 'updatePassword': "+e.getMessage());
+			ExtentReportHelper.logFail("Exception in method 'updatePassword': " + e.getMessage());
 		}
 
+		return testResult;
+
 	}
-	
+
 	public void logout()
 	{
-		try {
+		try
+		{
 			dropdownProfileIcon.click();
 			optionLogout.click();
-			
+
 			ExplicitWait.waitUntilElementIsVisible(driver, textBoxEmail);
 
-			if(textBoxEmail.isDisplayed())
+			if (textBoxEmail.isDisplayed())
 			{
-				System.out.println("Logout Successful");
+				ExtentReportHelper.logPass("Logout Successful");
 			}
 			else
 			{
-				System.out.println("Logout Failed");
+				ExtentReportHelper.logFail("Logout Failed");
 			}
-		} 
-		catch (Exception e) {
-			System.out.println("Exception in method 'logout': "+e.getMessage());
 		}
-	
+		catch (Exception e)
+		{
+			ExtentReportHelper.logFail("Exception in method 'logout': " + e.getMessage());
+		}
+
 	}
-	
-	
-	
 
 }
