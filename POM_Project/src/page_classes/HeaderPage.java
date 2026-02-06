@@ -19,7 +19,7 @@ public class HeaderPage
 	private final String textBoxPasswordByXpathPath = "//form[@id='form-update-user-password']//input[@name='password']";
 	private final String textBoxConfirmPasswordByXpathPath = "//form[@id='form-update-user-password']//input[@name='confirm_pass']";
 	private final String buttonUpdateByXpath = "//button[@type='submit' and text()='Update']";
-	private final String msgSuccessByXpath = "//span[@class='jconfirm-title']";
+	private final String msgSuccessByXpath = "//spa[@class='jconfirm-title']";
 	private final String optionLogoutByXpathPath = "//span[text()='Logout']";
 	private final String textBoxEmailByPath = "//input[@placeholder='Email']";
 

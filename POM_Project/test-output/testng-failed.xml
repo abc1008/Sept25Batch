@@ -5,9 +5,9 @@
     <classes>
       <class name="test_suites.HeaderTestSuite">
         <methods>
-          <include name="tearDown"/>
-          <include name="login"/>
           <include name="initDriver"/>
+          <include name="login"/>
+          <include name="tearDown"/>
           <include name="logout"/>
           <include name="tc_123_UpdatePasswordTest"/>
         </methods>

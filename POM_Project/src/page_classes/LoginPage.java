@@ -24,7 +24,7 @@ public class LoginPage {
 	private final String dropdownProfileIconById = "page-header-user-dropdown";
 	
 	
-	@FindBy(xpath = dropdownProfileIconById)
+	@FindBy(id = dropdownProfileIconById)
 	private WebElement dropdownProfileIcon;
 	
 	
